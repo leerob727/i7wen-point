@@ -1,4 +1,14 @@
 <?php get_header(); ?>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+		jQuery(".hoverable").one("hover",function(){
+        	jQuery.fancybox.open("#inline1");
+        });
+        
+    });
+</script>
+
 <?php $mts_options = get_option('point'); ?>
 <div id="page" class="single">
 	<div class="content">
