@@ -1,4 +1,36 @@
 <?php get_header(); ?>
+
+<script type="text/javascript">
+	 jQuery(document).ready(function() {
+		 var p = $( ".hoverable" );
+		var position = p.position();
+		var $divbottom = ($(window).height()-position.top);
+		 console.log($(window).height());
+		 console.log(position.top);
+		 
+		 var $window = $(window);
+ 		var flag = 0;
+			console.log(flag);
+		$(window).scroll(function() {
+			var $bottom = ($(document).height()-$(window).scrollTop());
+			var p = $( ".hoverable" );
+		var position = p.position();
+		var $divbottom = ($(window).height()-position.top);
+		
+		 	console.log(position.top);
+			console.log($(window).scrollTop());
+			
+			if($(window).scrollTop() >=position.top){
+				jQuery.fancybox.open("#inline1");
+				  $(window).off("scroll");
+				console.log('success');
+				}
+			
+		});
+	    
+    });
+</script>
+
 <?php $mts_options = get_option('point'); ?>
 
 <div id="page" class="single">
