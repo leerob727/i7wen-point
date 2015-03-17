@@ -64,9 +64,12 @@
 							<?php the_content(); ?>
 							<?php wp_link_pages(array('before' => '<div class="pagination">', 'after' => '</div>', 'link_before'  => '<span class="current"><span class="currenttext">', 'link_after' => '</span></span>', 'next_or_number' => 'next_and_number', 'nextpagelink' => __('Next','mythemeshop'), 'previouspagelink' => __('Previous','mythemeshop'), 'pagelink' => '%','echo' => 1 )); ?>
 <?php if (fb_allowed()) {
-	echo '<div style="margin-bottom:8px;overflow:hidden;"><div style="display:inline-block;padding-right:5px;" class="fb-like" data-href="https://www.facebook.com/pages/&#x7231;&#x5947;&#x95fb;-i7wencom/399615256870590" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div><div class="fb-share-button" data-href="' . $_SERVER["REQUEST_URI"] . '" data-layout="button"></div></div>'; //Facebook
-    } ?>
-	<?php rlee_after_pagination(); //RLEE ?>
+echo '<div style="margin-bottom:8px;overflow:hidden;"><div style="display:inline-block;padding-right:5px;" class="fb-like" data-href="https://www.facebook.com/pages/&#x7231;&#x5947;&#x95fb;-i7wencom/399615256870590" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>
+
+<div class="fb-share-button" data-href="' . $_SERVER["REQUEST_URI"] . '" data-layout="button"></div></div>'; //Facebook
+} ?>
+
+<?php rlee_after_pagination(); //RLEE ?>
 							<?php if ($mts_options['mts_postend_adcode'] != '') { ?>
 								<?php $endtime = $mts_options['mts_postend_adcode_time']; if (strcmp( date("Y-m-d", strtotime( "-$endtime day")), get_the_time("Y-m-d") ) >= 0) { ?>
 									<div class="bottomad">
