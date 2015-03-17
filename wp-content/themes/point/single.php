@@ -118,7 +118,7 @@ echo '<div style="margin-bottom:8px;overflow:hidden;"><div style="display:inline
 								$pexcerpt=1; $j = 0; $counter = 0; while( $my_query->have_posts() ) { ++$counter; if($counter == 4) { $postclass = 'last'; $counter = 0; } else { $postclass = ''; } $my_query->the_post();?>
 								<li class="<?php echo $postclass; ?> rpexcerpt<?php echo $pexcerpt ?> <?php echo (++$j % 2 == 0) ? 'last' : ''; ?>">
 <?php if($postclass == 'last'): //RLEE ?>
-<a rel="nofollow" class="relatedthumb" href="http://pkxuan.com/blog.html?ref=i7wen" rel="bookmark" title="想在這裡看到你的内容?">
+<a rel="nofollow" class="relatedthumb" href="http://pkxuan.com?ref=i7wen" rel="bookmark" title="想在這裡看到你的内容?">
 <span class="rthumb">
 <img width="140" height="100" src="http://i7wen.com/wp/wp-content/uploads/2015/02/pkxuan.jpg" class="attachment-smallthumb wp-post-image" alt="" title="" /></span>
 <span>想在這裡看到你的内容?</span>
